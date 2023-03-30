@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.oyunAlani{
+    display: flex; /*Görüntünün esnek olabilmesi için*/
+    flex-direction: column; /*Esnek yapının sütun bazlı olabilmesi için*/
+    background: linear-gradient(to right left, #ffe100 0%, #038af8 100%);
+    align-items: center; /*ekran üzerinde yer alan bilgilerin ortalanması için*/
+    justify-content: center; /*Sağa sola yaslayabilmek için*/
+    height: 100vh; /*yüksekliğimiz*/
+}
+main{
+    display: grid; /*görünümün ızgara gibi gözükmesi için*/
+    grid-template-columns: 200px 200px 200px; /*Grid altındaki ögelerin sütun bazlı görüntülenebilmesi için*/
+    grid-gap: 10px; /*Ögeler arası boşluk verebilmek için*/
+}
+h1{
+    text-align: right; /*h1 etiketli olanlar sağa yaslı olsun.*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*yazı tipi*/
+    padding: 20px 0px; /*boşluk*/
+    width: 100%; /*Genişlik*/
+    margin-right: 30px; /*sağ taraftan kaç px'lik boşluk olsun*/
+    color: blue; /*h1 etiketinin rengi*/
+}
+h2{
+    text-align: center; 
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px 0px;
+    width: 100%;
+    margin-right: 30px;
+    color: blue;
+}
+button{
+    font-size: 20px; /*buton etiketli olanların yazı büyüklüğü*/
+    padding: 10px; 
+    border-radius: 10px; /*butonun köşelerinin sivriliği*/
+    border: none; /*çizgi olup olmadığı varsa kalınlığı*/
+    margin: 10px;
+}
+app-board{
+    border: 1px solid rgb(57, 57, 57) solid;
+    height: 200px;
+}

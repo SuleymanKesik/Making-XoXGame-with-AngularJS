@@ -1,0 +1,14 @@
+<div class="oyunAlani">
+    <h2 *ngIf="sayfayiYenile">Tic Tac Toe Oyna</h2> <!-- sayfa yenilendiğinde yazı çıksın istiyorsan ngIf'i yazdık.-->
+    <h1 *ngIf="!kazanan && !ciz && !sayfayiYenile">Mevcut Oyuncu: {{oyuncu}} </h1> 
+    <!-- kazananın olmadığı, sayfanın yenilenmediği ve çizimlerin olmadığı durumda mevcut oyunun tipini gösterecek X yada O -->
+    <h2 *ngIf="kazanan">Oyuncu: {{kazanan}} </h2> <!-- kazanan oyuncunun sembolünü gösterecek O veya X-->
+    <h2 *ngIf="ciz">Çiz !</h2> <!-- Cizim işlemini gerçekleştirecek.-->
+    <button (click)="yeniOyun()">Oyuna Başla</button> <!-- Butona basılmasıyla birlikte oyun.component.ts sayfasındaki yeniOyun fonksiyonu çalışacak.-->
+    <main *ngIf="!kazanan && !ciz">
+        <app-board *ngFor="let deger of kareler; let i = index"[deger]="deger" (click)= "cizimYap(i)"></app-board>
+        <!-- ngFor: kareler sayısı kadar deger değişkeninin boyutunu tut, sonra bu degerin boyutu kadar kare oluştur diyoruz.-->
+        <!-- cizimYap(i) dediğimizde de çizme işlemini gerçekleştiriyor.-->
+    </main>
+</div>
+

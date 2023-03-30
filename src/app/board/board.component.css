@@ -1,0 +1,7 @@
+button {
+    width: 100%; /*tahta üzerindeki butonların genişliğini ayarla*/
+    height: 100%;/*tahta üzerindeki butonların yüksekliğini ayarla*/
+    font-size: 60px; /*butonlardaki sembollerin boyutu*/
+    background-color: wheat; /*butonun rengi*/
+    border: 10px; /*kenarlık kalınlığı*/
+}
